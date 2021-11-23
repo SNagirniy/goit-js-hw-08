@@ -5,7 +5,7 @@ const email = document.querySelector('input');
 const message = document.querySelector('textarea')
 const DATA_KEY = "feedback-form-state";
 
-const formData = {...JSON.parse(localStorage.getItem(DATA_KEY))};
+
     
 
     
@@ -17,7 +17,7 @@ formEl.addEventListener('submit', handlerFormSubmit);
 
  
 function setFormData(event) {
-
+    const formData = {...JSON.parse(localStorage.getItem(DATA_KEY))};
    formData[event.target.name] = event.target.value;
 
     const udateStorage = JSON.stringify(formData);
